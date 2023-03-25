@@ -4,7 +4,7 @@ This is a tool to help you learn Italian vocabulary. The tool presents you with 
 
 ## Requirements
 
-The only requirement is `Python 3.x`, where `Python 3.6` is advised.
+The only requirement is `Python 3.x`, where `Python 3.6` or above is advised.
 
 ## Installation
 
