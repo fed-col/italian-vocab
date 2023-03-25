@@ -129,6 +129,7 @@ tell_programming_joke()
 print("--------------------")
 
 # Print a message to say goodbye to the user
+print("\nGreat job! You've finished revising your vocabulary for today.")
 print(
-    "\nGreat job! You've finished revising your vocabulary for today. Why not come back tomorrow and see how many words you can remember? Have fun learning! \U0001f389"
+    "Why not come back tomorrow and see how many words you can remember? Have fun learning! \U0001f389"
 )
