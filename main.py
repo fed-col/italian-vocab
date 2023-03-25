@@ -84,16 +84,16 @@ while game:
 
 
 # Print a message to congratulate the user on revising words
-print('--------------------')
+print("--------------------")
 print(
     f'\nWell done! You revised {words_done} word{"s" if words_done != 1 else ""} today \U0001f600 \n'
 )
 
 # Print a joke to amuse the user
-print('--------------------')
+print("--------------------")
 print("Here's a great joke as reward:\n")
 tell_programming_joke()
-print('--------------------')
+print("--------------------")
 
 # Print a message to say goodbye to the user
 print(f"\n \nTake care!")
