@@ -1,3 +1,14 @@
+Alphabet
+Letter
+Vowel
+Consonant
+Hi/Bye
+Hello
+Good morning
+Good evening
+Good night
+Goodbye (neutral)
+Goodbye (formal)
 Spring
 Summer
 Autumn

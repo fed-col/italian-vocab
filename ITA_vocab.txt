@@ -1,3 +1,14 @@
+Alfabeto
+Lettera
+Vocale
+Consonante
+Ciao
+Salve
+Buongiorno
+Buonasera
+Buonanotte
+Arrivederci
+Arrivederla
 Primavera
 Estate
 Autunno
