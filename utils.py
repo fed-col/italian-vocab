@@ -1,4 +1,5 @@
 from typing import Dict, List, Tuple
+import pyjokes
 
 
 def create_dict(file1: str, file2: str) -> Tuple[Dict[str, str], List[str], List[str]]:
@@ -19,3 +20,11 @@ def create_dict(file1: str, file2: str) -> Tuple[Dict[str, str], List[str], List
     # Combine the two lists of strings into a list of tuples, and then convert that list into a dictionary
     # The resulting dictionary has keys and values that are both strings
     return dict(zip(keys, values)), keys, values
+
+
+def tell_programming_joke():
+    """
+    Prints a random programming-related joke using the pyjokes library.
+    """
+    joke = pyjokes.get_joke(language='en', category='all')
+    print(joke)
