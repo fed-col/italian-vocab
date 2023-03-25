@@ -2,7 +2,8 @@ Alphabet
 Letter
 Vowel
 Consonant
-Hi/Bye
+Hi
+Bye
 Hello
 Good morning
 Good evening

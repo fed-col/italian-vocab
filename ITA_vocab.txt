@@ -2,7 +2,8 @@ Alfabeto
 Lettera
 Vocale
 Consonante
-Ciao
+Ciao (upon meeting)
+Ciao (upon departure)
 Salve
 Buongiorno
 Buonasera
