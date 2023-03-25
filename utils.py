@@ -1,25 +1,47 @@
+import csv
 from typing import Dict, List, Tuple
 import pyjokes
 
 
-def create_dict(file1: str, file2: str) -> Tuple[Dict[str, str], List[str], List[str]]:
+def create_dict(
+    file_path: str, from_lan: str, to_lan: str, delimiter: str = ","
+) -> Tuple[Dict[str, str], List[str]]:
     """
-    Read two text files and return a dictionary, and two lists of strings.
-    :param file1: A string representing the path to a text file
-    :param file2: A string representing the path to a text file
-    :return: A tuple containing a dictionary where keys are strings and values are strings,
-             and two lists of strings
-    """
-    # Open both files using the 'with' statement, which automatically closes the files when we're done with them
-    with open(file1) as f1, open(file2) as f2:
-        # Read all lines from the first file into a list called 'keys', and remove any newline characters
-        keys = [line.strip() for line in f1.readlines()]
-        # Read all lines from the second file into a list called 'values', and remove any newline characters
-        values = [line.strip() for line in f2.readlines()]
+    Reads a CSV file with two columns and returns a dictionary
+    containing the key-value pairs, and a list of the keys.
 
-    # Combine the two lists of strings into a list of tuples, and then convert that list into a dictionary
-    # The resulting dictionary has keys and values that are both strings
-    return dict(zip(keys, values)), keys, values
+    Args:
+        file_path (str): The path to the CSV file to read.
+        from_lan (str): The name of the column containing the keys in the CSV file.
+        to_lan (str): The name of the column containing the values in the CSV file.
+        delimiter (str): The delimiter used in the CSV file. Defaults to ','.
+
+    Returns:
+        A tuple containing:
+        - A dictionary with key-value pairs from the CSV file.
+        - A list of keys from the CSV file.
+
+    Raises:
+        FileNotFoundError: If the specified CSV file does not exist.
+    """
+    # Create an empty dictionary and list to hold the data
+    data_dict = {}
+    keys_list = []
+
+    try:
+        # Open the CSV file and create a dictionary reader
+        with open(file_path, newline="") as csvfile:
+            reader = csv.DictReader(csvfile, delimiter=delimiter)
+
+            # Use a dict comprehension to create the dictionary from the CSV data
+            data_dict = {rows[from_lan]: rows[to_lan] for rows in reader}
+            # Get the list of keys from the dictionary
+            keys_list = list(data_dict.keys())
+
+        # Return the dictionary and list of keys as a tuple
+        return data_dict, keys_list
+    except FileNotFoundError:
+        print(f"Error: File '{file_path}' not found.")
 
 
 def tell_programming_joke():
