@@ -10,7 +10,7 @@ print("You have 3 attempts per word.\n")
 print("Let's get started!")
 
 # Create a dictionary from two text files and get the keys and values as lists
-vocab_dict, keys, values = create_dict("ITA_vocab.txt", "ENG_vocab.txt")
+vocab_dict, keys = create_dict("ita_eng_db.csv")
 
 # Initialise variables for the while loop
 word = True
