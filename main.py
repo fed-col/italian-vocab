@@ -84,7 +84,7 @@ while game:
 
 
 # Print a message to congratulate the user on revising words
-print(f'Well done! You revised {words_done} word{"s" if count != 1 else ""} today :)')
+print(f'Well done! You revised {words_done} word{"s" if words_done != 1 else ""} today :)')
 
 # Print a message to say goodbye to the user
 print(f"Take care!")
