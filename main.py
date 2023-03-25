@@ -1,5 +1,5 @@
 import random
-from utils import create_dict
+from utils import create_dict, tell_programming_joke
 
 # Greeting message to the user
 print(f"Ciao! Come stai? \nThis is an interactive tool to revise vocabulary.")
@@ -84,7 +84,12 @@ while game:
 
 
 # Print a message to congratulate the user on revising words
-print(f'Well done! You revised {words_done} word{"s" if words_done != 1 else ""} today :)')
+print(
+    f'Well done! You revised {words_done} word{"s" if words_done != 1 else ""} today :)'
+)
+
+# Print a joke to amuse the user
+tell_programming_joke()
 
 # Print a message to say goodbye to the user
 print(f"Take care!")

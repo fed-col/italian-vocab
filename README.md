@@ -11,7 +11,8 @@ The only requirement is `Python 3.x`, where `Python 3.6` or above is advised.
 To start using the tool on your machine, all you need to do is
 
 1. Clone the repository to your local machine using git clone `https://github.com/your-username/italian-vocab.git`
-2. Install the required dependencies by running `make install`.
+2. Install `piptools` to simply let you install all requirements.
+3. Install the required dependencies by running `make install`.
 > Please note that the `make` command is a UNIX-specific command. If you are working on a Windows machine, you may need to install it using a package manager like Chocolatey via the command `choco install make`, or a similar alternative.
 
 ## Usage

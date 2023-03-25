@@ -10,6 +10,10 @@ lint-all:
 lint:
 	black $(FILE_NAME)
 
+# install piptools that are used down the line
+install-pip-tools:
+    pip3 install pip-tools
+
 # generate the requirements.txt file with pip-tools
 reqs:
 	python3 -m piptools compile --output-file=requirements.txt requirements.in --resolver=backtracking
