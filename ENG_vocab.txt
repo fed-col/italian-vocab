@@ -8,8 +8,8 @@ Hello
 Good morning
 Good evening
 Good night
-Goodbye (neutral)
-Goodbye (formal)
+Goodbye
+Goodbye
 Spring
 Summer
 Autumn
