@@ -38,7 +38,7 @@ while game:
         # Get the user's answer
         ans = input(f'How do you translate into English "{random_key}"?\n')
 
-        if str(ans).capitalize() == vocab_dict[random_key]:
+        if str(ans).capitalize().strip() == vocab_dict[random_key]:
             # If the answer is correct
             print(
                 f'The answer is correct! It took you {count} attempt{"s" if count != 1 else ""}!\n'
@@ -56,7 +56,7 @@ while game:
             word = False
             game = True if cont[0].upper() == "Y" else False
 
-        elif str(ans).capitalize() != vocab_dict[random_key] and count < 3:
+        elif str(ans).capitalize().strip() != vocab_dict[random_key] and count < 3:
             # If the answer is incorrect and the user has attempts remaining
             print(f"The answer is incorrect! This was your attempt number {count}!")
             print(
@@ -64,7 +64,7 @@ while game:
             )
             count += 1
 
-        elif str(ans).capitalize() != vocab_dict[random_key]:
+        elif str(ans).capitalize().strip() != vocab_dict[random_key]:
             # If the answer is incorrect and the user has used all attempts
             print(f"\nYour answer is incorrect! This was your 3rd attempt!")
             print(f"The correct answer was {vocab_dict[random_key]}")
