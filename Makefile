@@ -10,7 +10,7 @@ lint-all:
 lint:
 	black $(FILE_NAME)
 
-# Install pip-tools
+# install pip-tools
 pip-tools:
 	pip3 install pip-tools
 
@@ -32,7 +32,7 @@ help:
 	@echo "  run            run main.py"
 	@echo "  lint-all       format all files according to black"
 	@echo "  lint           format a specific file according to black (FILE_NAME required)"
-	@echo "  pip-tools  	Install pip-tools"
+	@echo "  pip-tools  	install pip-tools"
 	@echo "  reqs           generate requirements.txt file with pip-tools"
 	@echo "  install        install packages listed in requirements.txt"
 	@echo "  deps           return the names of any files that the program depends on"
