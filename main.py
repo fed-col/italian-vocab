@@ -36,27 +36,27 @@ while game:
 
     while word:
         # Get the user's answer
-        ans = input(f'How do you translate into English "{random_key}"?\n')
+        ans = input(f'How do you translate into English "{random_key}"?\n').capitalize().strip()
 
-        if str(ans).capitalize().strip() == vocab_dict[random_key]:
+        if ans == vocab_dict[random_key]:
             # If the answer is correct
             print(
                 f'The answer is correct! It took you {count} attempt{"s" if count != 1 else ""}!\n'
             )
             # Ask the user if they want to continue with a new word
-            cont = input("Would you like to carry on with a new word? [Y / N] --> ")
+            cont = input("Would you like to carry on with a new word? [Y / N] --> ").strip().upper()
 
             # Check if the user's response is valid
-            while cont[0].upper() not in ("Y", "N"):
+            while cont[0] not in ("Y", "N"):
                 print("Your answer is not valid. Answer with either Y or N, please.")
                 cont = input("Would you like to carry on with a new word? [Y / N] --> ")
 
             words_done += 1
             # End the current word loop and continue with the game loop if the user wants to continue
             word = False
-            game = True if cont[0].upper() == "Y" else False
+            game = True if cont[0] == "Y" else False
 
-        elif str(ans).capitalize().strip() != vocab_dict[random_key] and count < 3:
+        elif ans != vocab_dict[random_key] and count < 3:
             # If the answer is incorrect and the user has attempts remaining
             print(f"The answer is incorrect! This was your attempt number {count}!")
             print(
@@ -64,23 +64,23 @@ while game:
             )
             count += 1
 
-        elif str(ans).capitalize().strip() != vocab_dict[random_key]:
+        elif ans != vocab_dict[random_key]:
             # If the answer is incorrect and the user has used all attempts
             print(f"\nYour answer is incorrect! This was your 3rd attempt!")
             print(f"The correct answer was {vocab_dict[random_key]}")
 
             # Ask the user if they want to continue
-            cont = input("Would you like to carry on? [Y / N] --> ")
+            cont = input("Would you like to carry on? [Y / N] --> ").strip().upper()
 
             # Check if the user's response is valid
-            while cont[0].upper() not in ("Y", "N"):
+            while cont[0] not in ("Y", "N"):
                 print("Your answer is not valid. Answer with either Y or N, please.")
                 cont = input("Would you like to carry on with a new word? [Y / N] --> ")
 
             words_done += 1
             # End the current word loop and continue with the game loop if the user wants to continue
             word = False
-            game = True if cont[0].upper() == "Y" else False
+            game = True if cont[0] == "Y" else False
 
 
 # Print a message to congratulate the user on revising words
