@@ -10,9 +10,9 @@ lint-all:
 lint:
 	black $(FILE_NAME)
 
-# install pip-tools
+# Install pip-tools
 pip-tools:
-    pip3 install pip-tools
+	pip3 install pip-tools
 
 # generate the requirements.txt file with pip-tools
 reqs:

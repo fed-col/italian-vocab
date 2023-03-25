@@ -26,5 +26,5 @@ def tell_programming_joke():
     """
     Prints a random programming-related joke using the pyjokes library.
     """
-    joke = pyjokes.get_joke(category="programming")
+    joke = pyjokes.get_joke(language='en', category='all')
     print(joke)
