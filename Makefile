@@ -1,3 +1,8 @@
+# create and activate a virtual environment
+venv:
+	python3 -m venv venv
+	. venv/bin/activate
+
 # run main.py
 run:
 	python3 main.py
@@ -24,11 +29,12 @@ install:
 
 # return the names of any files that the program depends on
 deps:
-	echo 'ITA_vocab.txt ENG_vocab.txt utils.py'  # replace with your actual dependencies
+	echo 'ita_eng_db.csv utils.py'  # replace with your actual dependencies
 
 # show help
 help:
 	@echo "Please use 'make <target>' where <target> is one of the following:"
+	@echo "  venv           create and activate a virtual environment"
 	@echo "  run            run main.py"
 	@echo "  lint-all       format all files according to black"
 	@echo "  lint           format a specific file according to black (FILE_NAME required)"
