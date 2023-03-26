@@ -23,7 +23,7 @@ vocab_dict, keys = create_dict(
 )
 
 print(
-    f"You will be given a word in {from_lan.capitalize()} and you have to translate it correctly into {to_lan.capitalize()}."
+    f"You will be given a word in {from_lan.capitalize()} and you have to translate it into {to_lan.capitalize()}."
 )
 print("You have 3 attempts per word.\n")
 print("Let's get started!")
