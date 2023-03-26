@@ -4,7 +4,7 @@ from utils import create_dict, tell_programming_joke
 # Greeting message to the user
 print(f"Ciao! Come stai? \nThis is an interactive tool to revise vocabulary.\n")
 print(
-    "Firstly, what lamguage would you like to translate from?\nYou can choose between ITA and ENG.\n"
+    "Firstly, what language would you like to translate from?\nYou can choose between ITA and ENG.\n"
 )
 from_lan = input("So my answer is... ").upper().strip()
 
@@ -72,7 +72,7 @@ while game:
             )
 
             # Check if the user's response is valid
-            while cont[0] not in ("Y", "N"):
+            while not cont or cont[0] not in ("Y", "N"):
                 print("Your answer is not valid. Answer with either Y or N, please.")
                 cont = (
                     input("Would you like to carry on with a new word? [Y / N] --> ")
@@ -102,7 +102,7 @@ while game:
             cont = input("Would you like to carry on? [Y / N] --> ").strip().upper()
 
             # Check if the user's response is valid
-            while cont[0] not in ("Y", "N"):
+            while not cont or cont[0] not in ("Y", "N"):
                 print("Your answer is not valid. Answer with either Y or N, please.")
                 cont = (
                     input("Would you like to carry on with a new word? [Y / N] --> ")
