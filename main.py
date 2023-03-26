@@ -9,7 +9,7 @@ print(
 from_lan = input("So my answer is... ").upper().strip()
 
 # Check if the user's response is valid
-while from_lan not in ("ITA", "ENG"):
+while not from_lan or from_lan[:3] not in ("ITA", "ENG"):
     print("Your answer is not valid. Answer with either ITA or ENG, please.")
     from_lan = input("I would like to translate FROM... ").upper().strip()
 
