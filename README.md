@@ -4,7 +4,7 @@ This is an interactive tool to revise vocabulary, available in two languages: It
 
 ## Prerequisites
 
-Before starting, please make sure you have `Python 3.8` or higher installed on your machine.
+Before starting, please make sure you have `Python 3.7.1` or higher installed on your machine.
 
 ## Installation
 
@@ -39,6 +39,6 @@ The following targets are available in the `Makefile`:
 
 ## Built With
 
-* [`Python 3.8.10`](https://www.python.org)
+* [`Python 3.7.1`](https://www.python.org)
 * [`Pyjokes 0.6.0`](https://pyjok.es) - A library for programming-related jokes.
 * [`Pygame 2.3.0`](https://www.pygame.org/news) - A library for devloping games in Python.
