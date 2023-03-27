@@ -2,7 +2,7 @@ import pygame
 import sys, os
 import random
 
-# redirect pygame output to null device
+# Redirect pygame output to null device
 sys.stdout = open(os.devnull, "w")
 
 # Define some constants
