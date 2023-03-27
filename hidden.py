@@ -1,6 +1,5 @@
 import pygame
 import sys, os
-import numpy as np
 import random
 
 # redirect pygame output to null device
