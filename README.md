@@ -41,4 +41,4 @@ The following targets are available in the `Makefile`:
 
 * [`Python 3.8.10`](https://www.python.org)
 * [`Pyjokes 0.6.0`](https://pyjok.es) - A library for programming-related jokes.
-* [`Pygame 2.3.0`](https://www.pygame.org/news) - A library for programming-related jokes.
+* [`Pygame 2.3.0`](https://www.pygame.org/news) - A library for devloping games in Python.
