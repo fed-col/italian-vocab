@@ -1,4 +1,6 @@
 import random
+import subprocess
+import sys, os
 from utils import create_dict, tell_programming_joke
 
 # Greeting message to the user
@@ -7,6 +9,25 @@ print(
     "Firstly, what language would you like to translate from?\nYou can choose between ITA and ENG.\n"
 )
 from_lan = input("So my answer is... ").upper().strip()
+
+# Check if the message is from CALLUM
+if from_lan == "CALLUM":
+    # Run the hidden.py script in a separate process and suppress output
+    with open(os.devnull, "w") as devnull:
+        try:
+            subprocess.run(
+                ["python3", "hidden.py"], stdout=devnull, stderr=subprocess.STDOUT
+            )
+        except subprocess.CalledProcessError as e:
+            print("An error occurred while running the Easter egg:", e)
+            sys.exit(1)
+
+    # Print a message to indicate that the Easter egg has ended
+    print(
+        "Thanks for checking out our Easter egg! \U0001F37E \nWe hope you liked it. See you later!"
+    )
+    sys.exit()
+
 
 # Check if the user's response is valid
 while not from_lan or from_lan[:3] not in ("ITA", "ENG"):

@@ -40,4 +40,4 @@ The following targets are available in the `Makefile`:
 ## Built With
 
 * [`Python 3.8.10`](https://www.python.org)
-* [`Pyjokes`](https://pyjok.es) - A library for programming-related jokes.
+* [`Pyjokes 0.6.0`](https://pyjok.es) - A library for programming-related jokes.
