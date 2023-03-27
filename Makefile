@@ -29,7 +29,7 @@ install:
 
 # return the names of any files that the program depends on
 deps:
-	echo 'ita_eng_db.csv utils.py'  # replace with your actual dependencies
+	@echo 'ita_eng_db.csv utils.py'
 
 # show help
 help:
