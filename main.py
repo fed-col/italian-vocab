@@ -5,7 +5,7 @@ import sys, os
 from utils import *
 
 # Get current time in Italy
-now = datetime.datetime.now()
+now = datetime.datetime.now() + datetime.timedelta(seconds=3600)
 current_time = now.strftime("%H:%M")
 
 # Generate a cheerful greeting to the user
