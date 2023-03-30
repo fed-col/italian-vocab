@@ -17,6 +17,16 @@ SNAKE_BLOCK_SIZE = 10
 # Initialize Pygame
 pygame.init()
 
+# Load background music
+pygame.mixer.init()
+pygame.mixer.music.load("background_music.wav")
+
+# Set the volume
+pygame.mixer.music.set_volume(1)
+
+# Start playing the music on an infinite loop
+pygame.mixer.music.play(-1)
+
 # Set up the screen
 screen = pygame.display.set_mode([WINDOW_WIDTH, WINDOW_HEIGHT])
 pygame.display.set_caption("Snake")
@@ -179,6 +189,12 @@ while not game_over:
 
     # Set the frame rate
     clock.tick(15)
+
+# Stop the music
+pygame.mixer.music.stop()
+
+# Unload the music from memory
+pygame.mixer.music.unload()
 
 # Quit Pygame
 pygame.quit()
