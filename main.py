@@ -164,4 +164,5 @@ print(
 )
 
 # Display an image for 5 seconds
-display_image()
+if words_done > 20:
+    display_image()
