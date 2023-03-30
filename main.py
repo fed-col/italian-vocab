@@ -43,6 +43,7 @@ vocab_dict, keys = create_dict(
     file_path="ita_eng_db.csv", from_lan=from_lan, to_lan=to_lan
 )
 
+# Give the user some instructions
 print(
     f"You will be given a word in {from_lan.capitalize()} and you have to translate it into {to_lan.capitalize()}."
 )
