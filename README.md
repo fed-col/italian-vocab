@@ -28,6 +28,7 @@ Once the user has finished revising, the program will print a message congratula
 
 The following targets are available in the `Makefile`:
 
+* `venv`: Create and activate a virtual environment with `venv`
 * `run`: Run the program.
 * `lint-all`: Format all files according to black.
 * `lint`: Format a specific file according to black (FILE_NAME required).
