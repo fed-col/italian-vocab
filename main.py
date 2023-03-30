@@ -1,10 +1,17 @@
 import random
 import subprocess
+import datetime
 import sys, os
 from utils import create_dict, tell_programming_joke
 
-# Greeting message to the user
-print(f"Ciao! Come stai? \nThis is an interactive tool to revise vocabulary.\n")
+# Get current time in Italy
+now = datetime.datetime.now()
+current_time = now.strftime("%H:%M")
+
+# Generate a cheerful greeting to the user
+print(
+    f"Hello there! How are you doing today?\nIt's already {current_time} in Italy and it's the perfect time to boost your vocabulary!\nLet's get started!"
+)
 print(
     "Firstly, what language would you like to translate from?\nYou can choose between ITA and ENG.\n"
 )
