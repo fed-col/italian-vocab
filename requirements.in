@@ -4,6 +4,7 @@
 # sys -- built-in Python module
 # os -- built-in Python module
 # datetime -- built-in Python module
+# time -- built-in Python module
 # typing -- module included in Python 3.5 and later
 pyjokes==0.6.0
 pygame==2.3.0

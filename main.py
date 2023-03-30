@@ -2,7 +2,7 @@ import random
 import subprocess
 import datetime
 import sys, os
-from utils import create_dict, tell_programming_joke
+from utils import *
 
 # Get current time in Italy
 now = datetime.datetime.now()
@@ -162,3 +162,6 @@ print("\nGreat job! You've finished revising your vocabulary for today.")
 print(
     "Why not come back tomorrow and see how many words you can remember? Have fun learning! \U0001f389"
 )
+
+# Display an image for 5 seconds
+display_image()

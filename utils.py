@@ -1,4 +1,6 @@
 import csv
+import pygame
+import time
 from typing import Dict, List, Tuple
 import pyjokes
 
@@ -50,3 +52,41 @@ def tell_programming_joke():
     """
     joke = pyjokes.get_joke(language="en", category="all")
     print(joke)
+
+
+def display_image(file_path: str = "bravo.jpg") -> None:
+    """
+    Displays an image on the screen using Pygame.
+
+    Args:
+        file_path (str): The file path of the image to be displayed.
+    """
+    # Initialize Pygame
+    pygame.init()
+
+    # Set up the screen
+    screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
+    pygame.display.set_caption("Image Display")
+
+    # Load the image
+    image = pygame.image.load(file_path)
+
+    # Get the dimensions of the screen
+    screen_width, screen_height = pygame.display.get_surface().get_size()
+
+    # Scale the image to fit the screen
+    image = pygame.transform.scale(image, (screen_width, screen_height))
+
+    # Set the position of the image on the screen
+    image_rect = image.get_rect()
+    image_rect.center = (screen_width // 2, screen_height // 2)
+
+    # Display the image
+    screen.blit(image, image_rect)
+    pygame.display.flip()
+
+    # Wait for 5 seconds
+    time.sleep(3)
+
+    # Quit Pygame
+    pygame.quit()
