@@ -148,7 +148,7 @@ while game:
 # Print a message to congratulate the user on revising words
 print("--------------------")
 print(
-    f'\nNice work! You revised {words_done} word{"s" if words_done != 1 else ""} today! \U0001f600 \n'
+    f'\nGreat job! You revised {words_done} word{"s" if words_done != 1 else ""} today! \U0001f600 \n'
 )
 
 # Print a joke to amuse the user
@@ -158,7 +158,7 @@ tell_programming_joke()
 print("--------------------")
 
 # Print a message to say goodbye to the user
-print("\nGreat job! You've finished revising your vocabulary for today.")
+print("\nYou've finished revising your vocabulary for today.")
 print(
     "Why not come back tomorrow and see how many words you can remember? Have fun learning! \U0001f389"
 )
