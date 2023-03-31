@@ -36,6 +36,8 @@ The following targets are available in the `Makefile`:
 * `reqs`: Generate the requirements.txt file with pip-tools.
 * `install`: Install packages listed in requirements.txt.
 * `deps`: Return the names of any files that the program depends on.
+* `test`: Run all the pytests in the repository.
+* `clean`: Remove all files generated as part of the program run.
 * `help`: Show the help message.
 
 ## Built With

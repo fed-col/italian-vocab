@@ -57,5 +57,5 @@ help:
 	@echo "  install        install packages listed in requirements.txt"
 	@echo "  deps           return the names of any files that the program depends on"
 	@echo "  test			run all the pytests in the repository"
-	@echo "  help           show this help message"
 	@echo "  clean          remove generated files"
+	@echo "  help           show this help message"
