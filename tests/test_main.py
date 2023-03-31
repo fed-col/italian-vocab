@@ -1,7 +1,7 @@
 import os
 
 
-def test_csv_file_exists(vocab_path='ita_eng_db.csv'):
+def test_csv_file_exists(vocab_path="ita_eng_db.csv"):
     """
     Test to check if the vocabulary CSV file exists.
 
@@ -14,7 +14,7 @@ def test_csv_file_exists(vocab_path='ita_eng_db.csv'):
     assert os.path.isfile(vocab_path), f"{vocab_path} does not exist"
 
 
-def test_csv_file_not_empty(vocab_path='ita_eng_db.csv'):
+def test_csv_file_not_empty(vocab_path="ita_eng_db.csv"):
     """
     Test to check if the vocabulary CSV file is not empty.
 
