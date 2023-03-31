@@ -1,6 +1,8 @@
-import pygame
-import sys, os
+import os
 import random
+import sys
+
+import pygame
 
 # Redirect pygame output to null device
 sys.stdout = open(os.devnull, "w")

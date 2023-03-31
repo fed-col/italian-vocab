@@ -1,7 +1,8 @@
 import csv
-import pygame
 import time
 from typing import Dict, List, Tuple
+
+import pygame
 import pyjokes
 
 

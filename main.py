@@ -1,7 +1,9 @@
+import datetime
+import os
 import random
 import subprocess
-import datetime
-import sys, os
+import sys
+
 from utils import *
 
 # Get current time in Italy
