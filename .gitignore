@@ -1,6 +1,7 @@
 # Compiled Python files
 __pycache__/
 *.pyc
+*.pytest_cache/
 
 # IDE-specific files
 .vscode/
