@@ -8,3 +8,4 @@
 # typing -- module included in Python 3.5 and later
 pyjokes==0.6.0
 pygame==2.3.0
+black==23.1.0
