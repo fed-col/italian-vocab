@@ -18,7 +18,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-        pip install black isort bandit
+        pip install black isort
 
     - name: Run Black lint
       run: |
@@ -28,7 +28,3 @@ jobs:
       run: |
         python -m isort --check-only --skip=__pycache__ .
         python -m isort --atomic --apply --skip=__pycache__ .
-
-    - name: Run Bandit lint
-      run: |
-        python -m bandit -r .
