@@ -27,6 +27,7 @@ jobs:
     - name: Run isort lint
       run: |
         python -m isort --check-only --skip=__pycache__ .
+        python -m isort --atomic --apply --skip=__pycache__ .
 
     - name: Run Flake8 lint
       run: |
