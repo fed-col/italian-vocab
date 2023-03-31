@@ -1,43 +1,43 @@
-name: Python dependencies and linting
+name: Python linting
 
 on:
   push:
     branches: [ '*' ]
-  pull_request:
-    branches: [ main ]
 
 jobs:
   lint:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: [3.7.1, 3.8, 3.9, 3.10]
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+    - uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.7.1'
 
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-      
+        pip install black isort flake8 mypy bandit
+
     - name: Run Black lint
       run: |
-        python -m black --check .
+        python -m black --check --exclude=__pycache__ .
 
     - name: Run isort lint
       run: |
-        python -m isort --check-only .
-    
-    - name: Run flake8 lint
+        python -m isort --check-only --skip=__pycache__ .
+
+    - name: Run Flake8 lint
       run: |
-        python -m flake8 --max-line-length=88 .
-    
-    - name: Run mypy type checking
+        python -m flake8 --exclude=__pycache__ .
+
+    - name: Run MyPy lint
       run: |
         python -m mypy .
-    
-    - name: Run bandit security checks
+
+    - name: Run Bandit lint
       run: |
         python -m bandit -r .
