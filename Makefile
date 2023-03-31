@@ -31,6 +31,20 @@ install:
 deps:
 	@echo 'ita_eng_db.csv utils.py'
 
+# run all the pytests in the repo
+test:
+	python3 -m pytest  
+
+clean:
+	@if [ -d "venv" ]; then \
+		rm -rf venv; \
+		echo "Removed venv directory"; \
+	fi
+	@if [ -f "requirements.txt" ]; then \
+		rm -f requirements.txt; \
+		echo "Removed requirements.txt file"; \
+	fi
+
 # show help
 help:
 	@echo "Please use 'make <target>' where <target> is one of the following:"
@@ -42,4 +56,6 @@ help:
 	@echo "  reqs           generate requirements.txt file with pip-tools"
 	@echo "  install        install packages listed in requirements.txt"
 	@echo "  deps           return the names of any files that the program depends on"
+	@echo "  test			run all the pytests in the repository"
 	@echo "  help           show this help message"
+	@echo "  clean          remove generated files"
