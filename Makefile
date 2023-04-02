@@ -35,10 +35,23 @@ deps:
 test:
 	python3 -m pytest  
 
+# removes all files created while running the program
 clean:
 	@if [ -d "venv" ]; then \
 		rm -rf venv; \
 		echo "Removed venv directory"; \
+	fi
+	@if [ -d "__pycache__" ]; then \
+		rm -rf __pycache__; \
+		echo "Removed __pycache__ directory"; \
+	fi
+	@if [ -d "tests/__pycache__" ]; then \
+		rm -rf tests/__pycache__; \
+		echo "Removed tests/__pycache__ directory"; \
+	fi
+	@if [ -d ".pytest_cache" ]; then \
+		rm -rf .pytest_cache; \
+		echo "Removed .pytest_cache directory"; \
 	fi
 	@if [ -f "requirements.txt" ]; then \
 		rm -f requirements.txt; \
